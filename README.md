@@ -8,7 +8,7 @@ Moodify is a Flask web app that generates a personalized playlist for users base
 
 1. Clone this repository:
    ```bash
-   git clone https://github.com/yourusername/moodify.git
+   git clone https://github.com/anair1/moodify.git
    cd moodify
 2. Set up a virtual environment and install dependencies:
    ```bash
