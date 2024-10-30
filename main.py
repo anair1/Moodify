@@ -1,14 +1,13 @@
-from flask import Flask, send_file
+from flask import Flask
+
+from home import home_bp
+from login import login_bp
+from getrecs import getrecs_bp
 
 app = Flask(__name__, static_folder="./assets")
 
-@app.route("/")
-def index():
-    return send_file("./templates/index.html")
+app.register_blueprint(home_bp, url_prefix='/home')
+app.register_blueprint(login_bp, url_prefix='/login')
+app.register_blueprint(getrecs_bp, url_prefix='/recs')
 
-@app.route("/login")
-def login():
-    return send_file("./templates/index.html")
-
-if __name__ == "__main__":
-    app.run(debug=True)
+app.run(debug=True)
